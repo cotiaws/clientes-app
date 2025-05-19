@@ -1,0 +1,36 @@
+{
+  "clientes": [
+    {
+      "id": "dd834329-def4-4427-a435-5f72bad2e544",
+      "nome": "Ana Paula",
+      "cpf": "321.654.987-00",
+      "email": "anapaula@gmail.com",
+      "telefone": "(21) 96957-0000",
+      "dataCriacao": "2025-05-13T12:02:42.552Z"
+    },
+    {
+      "id": "690e2446-17de-4082-bd3c-9b4b7e8c53c2",
+      "nome": "Sergio da Silva Mendes",
+      "cpf": "12345678900",
+      "email": "sergio.coti@gmail.com",
+      "telefone": "21969575900",
+      "dataCriacao": "2025-05-15T11:02:35.846Z"
+    },
+    {
+      "id": "74f322cb-4f83-49a6-b04c-9f362c6a3045",
+      "nome": "Sergio da Silva Mendes",
+      "cpf": "12345678900",
+      "email": "sergio.coti@gmail.com",
+      "telefone": "21969575900",
+      "dataCriacao": "2025-05-15T11:31:14.337Z"
+    },
+    {
+      "id": "a46c9729-58e4-49e9-808b-ddaed3254b13",
+      "nome": "Sergio da Silva Mendes",
+      "cpf": "321656498700",
+      "email": "sergio.coti@gmail.com",
+      "telefone": "21969575900",
+      "dataCriacao": "2025-05-15T11:31:21.608Z"
+    }
+  ]
+}

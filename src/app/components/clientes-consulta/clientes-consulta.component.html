@@ -1,0 +1,42 @@
+<p-card header="Consulta de Clientes" class="mt-4">
+
+    <p-table [value]="clienteService.listagemClientes()" [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} clientes"
+        [rowsPerPageOptions]="[5,10,20]" class="p-datatable-sm p-mt-3" [responsiveLayout]="'scroll'">
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="nome">Nome <p-sortIcon field="nome"></p-sortIcon></th>
+                <th pSortableColumn="cpf">CPF <p-sortIcon field="cpf"></p-sortIcon></th>
+                <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
+                <th pSortableColumn="telefone">Telefone <p-sortIcon field="telefone"></p-sortIcon></th>
+                <th pSortableColumn="dataCriacao">Data de criação <p-sortIcon field="dataCriacao"></p-sortIcon></th>
+                <th>Ações</th>
+            </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-cliente>
+            <tr>
+                <td>{{ cliente.nome | uppercase }}</td>
+                <td>{{ cliente.cpf }}</td>
+                <td>{{ cliente.email | lowercase }}</td>
+                <td>{{ cliente.telefone }}</td>
+                <td>{{ cliente.dataCriacao | date: 'dd/MM/yyyy HH:mm' }}</td>
+                <td>
+                    <button pButton type="button" class="p-button-rounded p-button-text p-button-danger"
+                        pTooltip="Excluir" (click)="onDelete(cliente.id)">Excluir</button>
+                </td>
+            </tr>
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+            <tr>
+                <td colspan="6">
+                    Quantidade de clientes: {{ clienteService.listagemClientes().length }}
+                </td>
+            </tr>
+        </ng-template>
+
+    </p-table>
+
+</p-card>

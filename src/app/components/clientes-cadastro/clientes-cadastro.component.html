@@ -1,0 +1,52 @@
+<p-card header="Cadastro de Clientes" class="mt-4">
+    <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
+
+        <table class="w-full" width="100%">
+            <tr>
+                <td class="p-2">
+                    <label for="nome" class="font-semibold">Nome do cliente</label>
+                </td>
+                <td class="p-2">
+                    <input id="nome" type="text" pInputText formControlName="nome" class="w-full" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="p-2">
+                    <label for="cpf" class="font-semibold">CPF</label>
+                </td>
+                <td class="p-2">
+                    <input id="cpf" type="text" pInputText formControlName="cpf" class="w-full" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="p-2">
+                    <label for="email" class="font-semibold">Email</label>
+                </td>
+                <td class="p-2">
+                    <input id="email" type="email" pInputText formControlName="email" class="w-full" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="p-2">
+                    <label for="telefone" class="font-semibold">Telefone</label>
+                </td>
+                <td class="p-2">
+                    <input id="telefone" type="text" pInputText formControlName="telefone" class="w-full" />
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="p-2" align="left">
+                    <button type="submit" pButton label="Cadastrar cliente" class="p-button-success"
+                        [disabled]="formCadastro.invalid">
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</p-card>
